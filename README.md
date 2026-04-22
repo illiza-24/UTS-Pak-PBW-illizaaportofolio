@@ -1,4 +1,4 @@
-UTS Praktikum Pemrograman Berbasis Website
+UTS Praktikum Pemrograman Berbasis Web
 
 Nama: Illiza Khairamisa
 NPM: 2408107010017
