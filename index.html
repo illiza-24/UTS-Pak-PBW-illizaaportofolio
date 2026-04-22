@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illiza — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,700&family=Epilogue:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-letters">
+      <span>I</span><span>L</span><span>L</span><span>I</span><span>Z</span><span>A</span>
+    </div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <p class="loader-sub mono">loading portfolio...</p>
+  </div>
+</div>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="logo">
+    <span class="logo-mark">✦</span> illiza
+  </div>
+  <nav>
+    <a onclick="showPage('home')"     data-page="home">Home</a>
+    <a onclick="showPage('biodata')"  data-page="biodata">About</a>
+    <a onclick="showPage('family')"   data-page="family">Family</a>
+    <a onclick="showPage('hobi')"     data-page="hobi">Skills</a>
+    <a onclick="showPage('gallery')"  data-page="gallery">Gallery</a>
+    <a onclick="showPage('projects')" data-page="projects">Projects</a>
+    <a onclick="showPage('contact')"  data-page="contact">Contact</a>
+  </nav>
+  <div class="header-pill">
+    <span class="pulse-ring"></span>open to work
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="shape shape-blob-1"></div>
+  <div class="shape shape-blob-2"></div>
+  <div class="shape shape-ring"></div>
+  <div class="shape shape-star-1">✦</div>
+  <div class="shape shape-star-2">✶</div>
+  <div class="shape shape-dot-grid"></div>
+
+  <div class="hero">
+    <div class="hero-eyebrow">
+      <span class="mono">001</span>
+      <span class="eyebrow-line"></span>
+      <span>Informatics · Syiah Kuala University</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line-wrap"><span class="reveal-line">Creative</span></span>
+      <span class="line-wrap italic-line"><span class="reveal-line delay-1"><em>Designer</em></span></span>
+      <span class="line-wrap"><span class="reveal-line delay-2">&amp; Developer</span></span>
+    </h1>
+
+    <div class="hero-body">
+      <div class="hero-left">
+        <p class="hero-desc">Hey, I'm <strong>Illiza</strong> — an Informatics student who turns ideas into beautiful, functional digital experiences through design and code.</p>
+        <div class="hero-btns">
+          <button class="btn-primary magnetic" onclick="showPage('projects')">View Projects ↗</button>
+          <button class="btn-ghost magnetic" onclick="showPage('contact')">Let's Talk →</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-frame">
+          <img src="pp.jpeg" alt="Illiza" class="hero-img">
+          <div class="profile-deco-ring"></div>
+          <div class="profile-label mono">@illiza_khr_ ✦</div>
+          <div class="profile-blob"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee-belt">
+    <div class="marquee-inner">
+      <span>UI/UX Design</span><span class="mx">✦</span>
+      <span>Web Development</span><span class="mx">✦</span>
+      <span>Informatics</span><span class="mx">✦</span>
+      <span>JavaScript</span><span class="mx">✦</span>
+      <span>Figma</span><span class="mx">✦</span>
+      <span>Creative Coding</span><span class="mx">✦</span>
+      <span>PHP &amp; MySQL</span><span class="mx">✦</span>
+      <span>UI/UX Design</span><span class="mx">✦</span>
+      <span>Web Development</span><span class="mx">✦</span>
+      <span>Informatics</span><span class="mx">✦</span>
+      <span>JavaScript</span><span class="mx">✦</span>
+      <span>Figma</span><span class="mx">✦</span>
+      <span>Creative Coding</span><span class="mx">✦</span>
+      <span>PHP &amp; MySQL</span><span class="mx">✦</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="sn">7+</span>
+      <span class="sl mono">Programming Languages</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="sn">6+</span>
+      <span class="sl mono">Projects</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="sn">4</span>
+      <span class="sl mono">Design Tools</span>
+    </div>
+    <div class="stat-sep"></div>
+    <div class="stat-item">
+      <span class="sn">19</span>
+      <span class="sl mono">Years Old</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="biodata" class="page">
+  <div class="pg-header">
+    <span class="pg-num mono">002</span>
+    <h2 class="pg-title">About <em>Me</em></h2>
+  </div>
+
+  <div class="about-wrap">
+    <div class="about-col-img">
+      <div class="about-img-frame">
+        <img src="pp.jpeg" alt="Illiza" class="about-img">
+        <div class="about-img-ring"></div>
+        <div class="about-label mono">@illiza</div>
+      </div>
+      <div class="about-quote">
+        <div class="qmark">"</div>
+        <p>The sky's the limit</p>
+      </div>
+    </div>
+
+    <div class="about-col-info">
+      <p class="about-intro">Hi! I'm <mark>Illiza</mark>, a passionate Informatics student who loves building digital things that look good <em>and</em> work great.</p>
+
+      <div class="bio-grid">
+        <div class="bio-row reveal-card">
+          <span class="bio-ico">👤</span>
+          <div><span class="bio-lbl mono">Full Name</span><span class="bio-val">Illiza Khairamisa</span></div>
+        </div>
+        <div class="bio-row reveal-card">
+          <span class="bio-ico">🎂</span>
+          <div><span class="bio-lbl mono">Age</span><span class="bio-val">19 years old</span></div>
+        </div>
+        <div class="bio-row reveal-card">
+          <span class="bio-ico">📍</span>
+          <div><span class="bio-lbl mono">Born</span><span class="bio-val">Bandung, 9 September 2006</span></div>
+        </div>
+        <div class="bio-row reveal-card">
+          <span class="bio-ico">🎓</span>
+          <div><span class="bio-lbl mono">Major</span><span class="bio-val">Informatics, Syiah Kuala University</span></div>
+        </div>
+        <div class="bio-row reveal-card">
+          <span class="bio-ico">✉️</span>
+          <div><span class="bio-lbl mono">Email</span><span class="bio-val">illizaakhairamisa@gmail.com</span></div>
+        </div>
+        <div class="bio-row reveal-card">
+          <span class="bio-ico">🌙</span>
+          <div><span class="bio-lbl mono">Nickname</span><span class="bio-val">Illiza / Liza</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section id="family" class="page">
+  <div class="pg-header">
+    <span class="pg-num mono">003</span>
+    <h2 class="pg-title">My <em>Family</em></h2>
+  </div>
+  <p class="pg-desc">The people who matter most in my world 💛</p>
+  <div class="fam-grid">
+    <div class="fam-card reveal-card">
+      <div class="fam-emoji">👨</div>
+      <div class="fam-role mono">Father</div>
+      <div class="fam-name">Mr. A</div>
+      <div class="fam-line"></div>
+      <div class="fam-sub">My hero &amp; protector</div>
+    </div>
+    <div class="fam-card fam-feat reveal-card">
+      <div class="fam-emoji">👩</div>
+      <div class="fam-role mono">Mother</div>
+      <div class="fam-name">Mrs. B</div>
+      <div class="fam-line"></div>
+      <div class="fam-sub">My whole world ✦</div>
+    </div>
+    <div class="fam-card reveal-card">
+      <div class="fam-emoji">👧</div>
+      <div class="fam-role mono">Younger Sister</div>
+      <div class="fam-name">Sister R</div>
+      <div class="fam-line"></div>
+      <div class="fam-sub">My lil bestie</div>
+    </div>
+    <div class="fam-card reveal-card">
+      <div class="fam-emoji">👦</div>
+      <div class="fam-role mono">Younger Brother</div>
+      <div class="fam-name">Brother B</div>
+      <div class="fam-line"></div>
+      <div class="fam-sub">My lil troublemaker</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="hobi" class="page">
+  <div class="pg-header">
+    <span class="pg-num mono">004</span>
+    <h2 class="pg-title">Hobbies &amp; <em>Skills</em></h2>
+  </div>
+
+  <div class="skills-wrap">
+    <div class="skills-half">
+      <p class="grp-label mono">— HOBBIES</p>
+      <div class="hobby-stack">
+        <div class="hobby-card reveal-card">
+          <span class="hobby-emo">🎧</span>
+          <div><strong>Listening to Music</strong><p>From indie to K-pop, music is my escape</p></div>
+        </div>
+        <div class="hobby-card reveal-card">
+          <span class="hobby-emo">🎬</span>
+          <div><strong>Watching</strong><p>Movies, K-Drama, C-Drama, Disney &amp; more</p></div>
+        </div>
+      </div>
+
+      <p class="grp-label mono" style="margin-top:32px">— FAVORITE ARTISTS</p>
+      <div class="artist-stack">
+        <div class="artist-row reveal-card">
+          <span class="a-idx mono">01</span>
+          <div><strong>LANY</strong><span class="mono">Indie Pop</span></div>
+          <span class="a-arr">→</span>
+        </div>
+        <div class="artist-row reveal-card">
+          <span class="a-idx mono">02</span>
+          <div><strong>Nadhif Basalamah</strong><span class="mono">Indonesian Indie</span></div>
+          <span class="a-arr">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-half">
+      <p class="grp-label mono">— DESIGN TOOLS</p>
+      <div class="tools-row">
+        <div class="tool-box reveal-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg" alt="Illustrator">
+          <span>Illustrator</span>
+          <div class="sbar"><div class="sfill" style="--w:85%"></div></div>
+        </div>
+        <div class="tool-box reveal-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" alt="Photoshop">
+          <span>Photoshop</span>
+          <div class="sbar"><div class="sfill" style="--w:80%"></div></div>
+        </div>
+        <div class="tool-box reveal-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+          <span>Figma</span>
+          <div class="sbar"><div class="sfill" style="--w:90%"></div></div>
+        </div>
+        <div class="tool-box reveal-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+          <span>Canva</span>
+          <div class="sbar"><div class="sfill" style="--w:95%"></div></div>
+        </div>
+      </div>
+
+      <p class="grp-label mono" style="margin-top:32px">— PROGRAMMING</p>
+      <div class="lang-wrap">
+        <span class="lchip">C</span>
+        <span class="lchip">Java</span>
+        <span class="lchip">Python</span>
+        <span class="lchip hot">HTML</span>
+        <span class="lchip hot">CSS</span>
+        <span class="lchip hot">JavaScript</span>
+        <span class="lchip">SQL</span>
+        <span class="lchip">PHP</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-primary magnetic" style="margin:40px 64px 80px" onclick="showPage('gallery')">See My Designs ↗</button>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="page">
+  <div class="pg-header">
+    <span class="pg-num mono">005</span>
+    <h2 class="pg-title">Design <em>Gallery</em></h2>
+  </div>
+  <p class="pg-desc">A curated selection from my full collection</p>
+
+  <div class="gal-grid" id="galleryGrid">
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain1.png" alt="Design 1" loading="lazy">
+      <div class="gal-overlay"><span class="mono">01</span></div>
+    </div>
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain2.png" alt="Design 2" loading="lazy">
+      <div class="gal-overlay"><span class="mono">02</span></div>
+    </div>
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain3.png" alt="Design 3" loading="lazy">
+      <div class="gal-overlay"><span class="mono">03</span></div>
+    </div>
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain4.jpg" alt="Design 4" loading="lazy">
+      <div class="gal-overlay"><span class="mono">04</span></div>
+    </div>
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain5.png" alt="Design 5" loading="lazy">
+      <div class="gal-overlay"><span class="mono">05</span></div>
+    </div>
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain6.jpg" alt="Design 6" loading="lazy">
+      <div class="gal-overlay"><span class="mono">06</span></div>
+    </div>
+    <div class="gal-item reveal-card" data-cat="design">
+      <img src="Desain7.jpg" alt="Design 7" loading="lazy">
+      <div class="gal-overlay"><span class="mono">07</span></div>
+    </div>
+  </div>
+
+  <div class="gal-cta">
+    <p>Want to see the full collection?</p>
+    <button class="btn-primary magnetic" onclick="showPage('contact')">Get in Touch ↗</button>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lb-close" onclick="closeLightbox()">✕</div>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="page">
+  <div class="pg-header">
+    <span class="pg-num mono">006</span>
+    <h2 class="pg-title">My <em>Projects</em></h2>
+  </div>
+
+  <div class="proj-grid">
+
+    <!-- P01: Jeumala HCI -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-logo-wrap"><img src="Jeumala.png" alt="Jeumala" class="proj-logo"></div>
+        <div class="proj-badges">
+          <span class="badge b-purple">Figma</span>
+          <span class="badge b-green">HCI</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 01</div>
+      <h3 class="proj-name">Jeumala App</h3>
+      <p class="proj-about">A Human-Computer Interaction course project — designed a user-centered interface for the Jeumala application, applying HCI principles and prototyped in Figma.</p>
+      <div class="proj-tags"><span>Figma</span><span>Prototyping</span><span>UI/UX</span><span>HCI</span></div>
+      <div class="proj-foot">
+        <a href="https://www.figma.com/design/4SPXoGwMYBeUSIM75KLLre/Untitled?t=4tOaf2IFPKyvSeVz-1" target="_blank" class="btn-primary">Open in Figma ↗</a>
+      </div>
+    </div>
+
+    <!-- P02: Scientific Calculator -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-emo-wrap">🧮</div>
+        <div class="proj-badges">
+          <span class="badge b-orange">JavaScript</span>
+          <span class="badge b-blue">Group</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 02</div>
+      <h3 class="proj-name">Scientific Calculator</h3>
+      <p class="proj-about">A fully functional scientific calculator — supports sin, cos, tan, log, ln, √, π, e, DEG/RAD toggle, and full keyboard input. Built with pure HTML/CSS/JS for a Numerical Computing lab.</p>
+      <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Math</span></div>
+      <div class="proj-foot">
+        <a href="calculator.html" class="btn-primary">Launch ↗</a>
+      </div>
+    </div>
+
+    <!-- P03: BookSpace -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-emo-wrap">📚</div>
+        <div class="proj-badges">
+          <span class="badge b-amber">Java</span>
+          <span class="badge b-green">OOP</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 03</div>
+      <h3 class="proj-name">BookSpace</h3>
+      <p class="proj-about">An online bookstore system built in Java applying full OOP principles — encapsulation, inheritance (admin/customer), polymorphism (cart &amp; payment), abstraction, collections for catalog management, and exception handling.</p>
+      <div class="proj-tags"><span>Java</span><span>OOP</span><span>Collections</span><span>Exception Handling</span></div>
+      <div class="proj-foot">
+        <a href="https://github.com/Xirenaa/BookSpace_Kel10" target="_blank" class="btn-primary">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- P04: ECO -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-emo-wrap">⚡</div>
+        <div class="proj-badges">
+          <span class="badge b-orange">C Language</span>
+          <span class="badge b-green">DSA</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 04</div>
+      <h3 class="proj-name">ECO — Energy Consumption Optimizer</h3>
+      <p class="proj-about">A household energy management system in C — records, monitors, and manages power consumption of electronic devices. Features daily logging, usage history reports, and energy-saving suggestions.</p>
+      <div class="proj-tags"><span>C</span><span>Data Structures</span><span>Algorithms</span><span>Energy</span></div>
+      <div class="proj-foot">
+        <a href="https://github.com/Xirenaa/Kelompok_-10-_UAS" target="_blank" class="btn-primary">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- P05: Secant Calculator -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-emo-wrap">📐</div>
+        <div class="proj-badges">
+          <span class="badge b-purple">Numerical</span>
+          <span class="badge b-blue">C</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 05</div>
+      <h3 class="proj-name">Secant Method Calculator</h3>
+      <p class="proj-about">A numerical computing program in C for finding roots of non-linear equations using the Secant Method — no derivative needed. Supports trig, exponential, logarithm, power, and square root. Displays a clean iteration table.</p>
+      <div class="proj-tags"><span>C</span><span>Numerical Methods</span><span>Secant Method</span><span>Math</span></div>
+      <div class="proj-foot">
+        <a href="https://github.com/waazcode/Kelompok-3-Prak-Komnum" target="_blank" class="btn-primary">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- P06: Bank Queue -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-emo-wrap">🏦</div>
+        <div class="proj-badges">
+          <span class="badge b-orange">C</span>
+          <span class="badge b-amber">DSA</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 06</div>
+      <h3 class="proj-name">Bank Queue System</h3>
+      <p class="proj-about">A bank queuing system combining three data structures — Linked List, Queue, and Stack. Queue manages customer flow, Stack tracks transaction history with undo/cancel support. Features add, process, view, history, and cancel.</p>
+      <div class="proj-tags"><span>C</span><span>Linked List</span><span>Queue</span><span>Stack</span></div>
+      <div class="proj-foot">
+        <a href="https://github.com/Khairulfikri15/Tugas-Prak-SDA-Klp3" target="_blank" class="btn-primary">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- P07: Lab Loan System -->
+    <div class="proj-card reveal-card">
+      <div class="proj-top">
+        <div class="proj-emo-wrap">🔬</div>
+        <div class="proj-badges">
+          <span class="badge b-blue">C</span>
+          <span class="badge b-green">Practicum</span>
+        </div>
+      </div>
+      <div class="proj-idx mono">Project 07</div>
+      <h3 class="proj-name">Lab Equipment Loan System</h3>
+      <p class="proj-about">A laboratory equipment management system with role-based access — Admin can add, edit, delete, and view equipment; Users can browse, borrow, return, and view their borrowing history.</p>
+      <div class="proj-tags"><span>C</span><span>File I/O</span><span>Auth</span><span>CRUD</span></div>
+      <div class="proj-foot">
+        <a href="https://github.com/niniaseza/PROJECT-TIM-4" target="_blank" class="btn-primary">View on GitHub ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page">
+  <div class="pg-header">
+    <span class="pg-num mono">007</span>
+    <h2 class="pg-title">Let's <em>Connect</em></h2>
+  </div>
+  <p class="pg-desc">Have something to say? Drop a message or reach out on socials 💌</p>
+
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <p class="contact-big">I'm always open to new ideas, collaborations, or just a good conversation.</p>
+
+      <div class="socials">
+        <a href="https://instagram.com/illiza_khr_" target="_blank" class="soc-card">
+          <div class="soc-ico" style="background:#e1306c;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <div class="soc-info"><span class="mono">Instagram</span><strong>@illiza_khr_</strong></div>
+          <span class="soc-arr">→</span>
+        </a>
+        <a href="https://github.com/illiza-24" target="_blank" class="soc-card">
+          <div class="soc-ico" style="background:#24292e;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="soc-info"><span class="mono">GitHub</span><strong>@illiza-24</strong></div>
+          <span class="soc-arr">→</span>
+        </a>
+        <a href="mailto:illizaakhairamisa@gmail.com" class="soc-card">
+          <div class="soc-ico" style="background:#ea4335;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          </div>
+          <div class="soc-info"><span class="mono">Email</span><strong>illizaakhairamisa@gmail.com</strong></div>
+          <span class="soc-arr">→</span>
+        </a>
+      </div>
+
+      <div class="msg-panel">
+        <div class="msg-panel-head">
+          <span class="live-badge"><span class="live-dot"></span>LIVE</span>
+          <span class="mono">public · messages</span>
+        </div>
+        <div class="msg-list" id="messagesList">
+          <div class="msg-loading mono">Loading...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="form-card">
+        <div class="form-card-head">
+          <h3>Send a Message</h3>
+          <span class="mono">I usually respond within 24h</span>
+        </div>
+
+<form action="contact.php" method="POST">
+
+  <div class="ff">
+    <label class="mono">NAMA</label>
+    <input type="text" name="nama" placeholder="Nama lengkap..." required>
+  </div>
+
+  <div class="ff">
+    <label class="mono">EMAIL</label>
+    <input type="email" name="email" placeholder="email@contoh.com" required>
+  </div>
+
+  <div class="ff">
+    <label class="mono">PESAN</label>
+    <textarea name="pesan" placeholder="Tulis pesan kamu..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary full-w">
+    Kirim Pesan ✉
+  </button>
+
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span class="mono">© 2026 Illiza — All rights reserved</span>
+    <span class="mono">Made with 🧡 &amp; lots of coffee</span>
+  </div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
